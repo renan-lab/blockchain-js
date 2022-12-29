@@ -1,6 +1,10 @@
-const {GENESIS_DATA, MINE_RATE} = require('../config');
+/*const {GENESIS_DATA, MINE_RATE} = require('../config');
 const {cryptoHash} = require("../util");
-const hexToBinary = require("hex-to-binary");
+const hexToBinary = require("hex-to-binary");*/
+
+import hexToBinary from "hex-to-binary";
+import { GENESIS_DATA, MINE_RATE } from "../config.js";
+import cryptoHash from "../util/crypto-hash.js";
 
 class Block {
     constructor({data, hash, nonce, difficulty, timestamp, lasthash}){
@@ -47,4 +51,5 @@ class Block {
     }
 }
 
-module.exports = Block;
+//module.exports = Block;
+export default Block;
